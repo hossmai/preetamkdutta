@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preetam Dutta</title>
+  <title>Preetam K Dutta PhD</title>
 
   <!-- LaTeX.css -->
   <link rel="stylesheet" href="https://latex.vercel.app/style.css">
@@ -15,42 +15,64 @@
 
 <style>
   /* ===============================
+     Custom Fonts
+     =============================== */
+  @font-face {
+    font-family: "Neue Montreal";
+    src: url("fonts/neueMontreal-book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Editorial New";
+    src: url("fonts/editorialNew-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* ===============================
      Base Typography
      =============================== */
   body {
     margin: 0;
     padding: 0;
+    font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f6f4f1;
+    color: #36454F;
+  }
+  
+  /* Hero title */
+  #intro h1 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
+    font-weight: 400;
   }
   
   h1 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
     font-weight: 400;
     font-size: 2.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   
-  h2 {
-    font-weight: 400;
-    margin-bottom: 2rem;
-  }
-  
+  h2,
   h3 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
     font-weight: 400;
   }
   
   p {
-    margin: 1.2rem 0;
-  }
-  
-  .author {
-    font-style: normal;
-    font-size: 1rem;
-    opacity: 0.85;
+    margin: 1rem 0;
   }
   
   /* ===============================
-     Left Nav
+     Left Nav (Desktop)
      =============================== */
   nav {
     position: fixed;
@@ -65,12 +87,15 @@
   nav a {
     display: block;
     text-decoration: none;
+    color: #4B443D;
     opacity: 0.55;
+    font-weight: 400;
+    transition: font-weight 0.15s ease, opacity 0.15s ease;
   }
   
   nav a:hover {
     opacity: 1;
-    text-decoration: underline;
+    font-weight: 600;
   }
   
   /* ===============================
@@ -85,7 +110,7 @@
   }
   
   /* ===============================
-     Page Sections
+     Page Sections (Desktop)
      =============================== */
   .page-section {
     min-height: 100vh;
@@ -97,7 +122,7 @@
   }
   
   /* ===============================
-     INTRO LAYOUT (SIMPLE GRID)
+     Intro Layout (Desktop)
      =============================== */
   .intro-grid {
     display: grid;
@@ -106,14 +131,12 @@
     align-items: center;
   }
   
-  /* Normal image, untouched */
   .intro-grid img {
-    width: 100%;
+    width: 260px;       /* locked */
     height: auto;
     display: block;
   }
   
-  /* Limit text width slightly */
   .intro-text {
     max-width: 600px;
   }
@@ -133,31 +156,64 @@
      Mobile
      =============================== */
   @media (max-width: 1000px) {
+  
+    /* Top mobile navbar */
     nav {
-      position: static;
+      position: sticky;
+      top: 0;
+      left: 0;
       transform: none;
-      width: auto;
-      margin: 2rem auto;
-      text-align: center;
+      width: 100%;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: inherit;
+      backdrop-filter: blur(6px);
+      z-index: 20;
     }
   
+    nav a {
+      font-size: 0.85rem;
+    }
+  
+    /* Main column */
     main {
       width: 90%;
       min-width: unset;
       margin: 0 auto;
     }
   
+    /* All sections except intro remain full-screen */
     .page-section {
+      min-height: 100vh;
+      padding: 14vh 0;
+    }
+  
+    /* 🔴 Intro is NOT full-screen on mobile */
+    #intro.page-section {
       min-height: auto;
       padding: 4rem 0;
     }
   
+    /* Stack intro content */
     .intro-grid {
       grid-template-columns: 1fr;
+      row-gap: 0.75rem;
+      align-items: start;
+    }
+  
+    /* Image above name, tight */
+    .intro-grid img {
+      width: 140px;      /* locked mobile size */
+      margin: 0 auto;
+    }
+  
+    .intro-text {
+      max-width: none;
     }
   }
   </style>
-
 <body>
 
 <nav>
@@ -240,15 +296,15 @@
     <p>
       <strong>Privacy and synthetic datasets</strong><br>
       <i>Sharing is a virtue, instilled in us from childhood Unfortunately, when it comes to big data-i e., databases possessing the potential to usher in a whole new world of scientific progress-the legal landscape is either too greedy or too Laissez-Faire. </i>
-    </p>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:u5HHmVD_uO8C#:~:text=Preetam%20K.%20Dutta-,%5BPDF%5D%20from%20ssrn.com,-Privacy%20and%20synthetic">[Link]</a></p>
     <p>
       <strong>Methods, systems, and media for testing insider threat detection systems</strong><br>
       <i>Methods, systems, and media simulate malicious insider bots using real user behavior models to test and evaluate threat detection system efficacy.</i>
-    </p>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:9yKSN-GCB0IC#:~:text=%5BPDF%5D%20from%20googleapis.com">[Link]</a></p>
     <p>
       <strong>Simulated user bots: Real time testing of insider threat detection systems</strong><br>
       <i>SUB framework deploys simulated insider threat bots mimicking real behaviors to test insider threat detection systems in live enterprise environments without disrupting operations.</i>
-    </p>
+      <a href="https://ieeexplore.ieee.org/abstract/document/8424654">[Link]</a></p>
 
   <p>
     300+ citations ·
