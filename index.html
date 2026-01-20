@@ -5,210 +5,376 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preetam K Dutta PhD</title>
 
+  <!-- ==================================================
+       External Styles
+       ================================================== -->
   <!-- LaTeX.css -->
   <link rel="stylesheet" href="https://latex.vercel.app/style.css">
 
-  <!-- MathJax -->
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-<style>
-  /* ===============================
-     Custom Fonts
-     =============================== */
-  @font-face {
-    font-family: "Neue Montreal";
-    src: url("fonts/neueMontreal-book.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Editorial New";
-    src: url("fonts/editorialNew-regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* ===============================
-     Base Typography
-     =============================== */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #f6f4f1;
-    color: #36454F;
-  }
-
-  /* Hero title */
-  #intro h1 {
-    font-family: "Editorial New", Georgia, "Times New Roman", serif;
-    font-weight: 400;
-  }
-
-  h1 {
-    font-family: "Editorial New", Georgia, "Times New Roman", serif;
-    font-weight: 400;
-    font-size: 2.6rem;
-    margin-bottom: 0.75rem;
-  }
-
-  h2,
-  h3 {
-    font-family: "Editorial New", Georgia, "Times New Roman", serif;
-    font-weight: 400;
-  }
-
-  p {
-    margin: 1rem 0;
-  }
-
-  /* ===============================
-     Left Nav (Desktop)
-     =============================== */
-  nav {
-    position: fixed;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 180px;
-    font-size: 0.9rem;
-    line-height: 2;
-  }
-
-  nav a {
-    display: block;
-    text-decoration: none;
-    color: #4B443D;
-    opacity: 0.55;
-    font-weight: 400;
-    transition: font-weight 0.15s ease, opacity 0.15s ease;
-  }
-
-  nav a:hover {
-    opacity: 1;
-    font-weight: 600;
-  }
-
-  /* ===============================
-     Main Content Column
-     =============================== */
-  main {
-    width: 50vw;
-    max-width: 900px;
-    min-width: 600px;
-    margin-left: calc(180px + 6rem);
-    margin-right: auto;
-  }
-
-  /* ===============================
-     Page Sections (Desktop)
-     =============================== */
-  .page-section {
-    min-height: 100vh;
-    padding: 20vh 0;
-  }
-
-  section {
-    scroll-margin-top: 12vh;
-  }
-
-  /* ===============================
-     Intro Layout (Desktop)
-     =============================== */
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .intro-grid img {
-    width: 260px;
-    height: auto;
-    display: block;
-  }
-
-  .intro-text {
-    max-width: 600px;
-  }
-
-  /* ===============================
-     Lists
-     =============================== */
-  ul {
-    padding-left: 1.2rem;
-  }
-
-  li {
-    margin-bottom: 1.2rem;
-  }
-
-  /* ===============================
-     Mobile
-     =============================== */
-  @media (max-width: 1000px) {
-
+  <style>
+    /* ==================================================
+       Custom Fonts
+       ================================================== */
+    @font-face {
+      font-family: "Neue Montreal";
+      src: url("fonts/neueMontreal-book.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+      font-family: "Editorial New";
+      src: url("fonts/editorialNew-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    /* ==================================================
+       Base Typography & Global Styles
+       ================================================== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #f6f4f1;
+      color: #36454F;
+    }
+    
+    /* ==================================================
+       Headings
+       ================================================== */
+    #intro h1 {
+      font-family: "Editorial New", Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.75rem;
+    }
+    
+    h1 {
+      font-family: "Editorial New", Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    h2,
+    h3 {
+      font-family: "Editorial New", Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+    
+    p {
+      margin: 1rem 0;
+    }
+    
+    /* ==================================================
+       Navigation (Desktop)
+       ================================================== */
     nav {
-      position: sticky;
-      top: 0;
-      left: 0;
-      transform: none;
-      width: 100%;
-      padding: 1rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background: inherit;
-      backdrop-filter: blur(6px);
-      z-index: 20;
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 180px;
+      font-size: 0.9rem;
+      line-height: 2;
     }
-
+    
     nav a {
-      font-size: 0.85rem;
+      display: block;
+      text-decoration: none;
+      color: #4B443D;
+      opacity: 0.55;
+      font-weight: 400;
+      transition: font-weight 0.15s ease, opacity 0.15s ease;
     }
-
+    
+    nav a:hover {
+      opacity: 1;
+      font-weight: 600;
+    }
+    
+    /* ==================================================
+       Main Content Column
+       ================================================== */
     main {
-      width: 90%;
-      min-width: unset;
-      margin: 0 auto;
+      width: 50vw;
+      max-width: 900px;
+      min-width: 600px;
+      margin-left: calc(180px + 6rem);
+      margin-right: auto;
     }
-
+    
+    /* ==================================================
+       Page Sections
+       ================================================== */
     .page-section {
       min-height: 100vh;
-      padding: 14vh 0;
+      padding: 20vh 0;
     }
-
-    /* Intro is NOT full-screen on mobile */
-    #intro.page-section {
-      min-height: auto;
-      padding: 4rem 0;
+    
+    section {
+      scroll-margin-top: 12vh;
     }
-
+    
+    /* ==================================================
+       Intro Section Layout
+       ================================================== */
     .intro-grid {
-      grid-template-columns: 1fr;
-      row-gap: 0.75rem;
-      align-items: start;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: center;
     }
-
+    
     .intro-grid img {
-      width: 140px;
-      margin: 0 auto;
+      width: 260px;
+      height: auto;
+      display: block;
     }
-
+    
     .intro-text {
-      max-width: none;
+      max-width: 600px;
     }
-  }
-</style>
+    
+    /* ==================================================
+       Lists
+       ================================================== */
+    ul {
+      padding-left: 1.2rem;
+    }
+    
+    li {
+      margin-bottom: 1.2rem;
+    }
+    
+    /* ==================================================
+       Intro Social Icons
+       ================================================== */
+    .intro-socials {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      margin-top: 1.25rem;
+    }
+    
+    .intro-socials a {
+      display: inline-flex;
+      align-items: center;
+      color: #4B443D;
+      opacity: 0.55;
+      transition: opacity 0.15s ease;
+    }
+    
+    .intro-socials a:hover {
+      opacity: 0.9;
+    }
+    
+    .intro-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    
+    /* ==================================================
+       Media Grid
+       ================================================== */
+    .media-grid {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+    }
+    
+    .media-item {
+      min-height: 320px;
+      padding: 1.8rem 1.7rem 1.6rem;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* ==================================================
+       Media Header
+       ================================================== */
+    .media-header {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .media-source {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    
+    /* ==================================================
+       Media Typography
+       ================================================== */
+    .media-title {
+      font-family: "Editorial New", serif;
+      font-size: 0.95rem;
+      line-height: 1.25;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.01em;
+    }
+    
+    .media-body {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      opacity: 0.82;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+    }
+    
+    .media-type {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-top: auto;
+      margin-bottom: 0.35rem;
+      white-space: nowrap;
+    }
+    
+    .media-meta {
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      white-space: nowrap;
+    }
+    
+    /* ==================================================
+       Load More
+       ================================================== */
+    .media-item.is-hidden {
+      display: none;
+    }
+    
+    .media-load-more {
+      margin: 3rem auto 0;
+      display: block;
+      background: transparent;
+      border: 1px solid rgba(0,0,0,0.18);
+      border-radius: 999px;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4B443D;
+      cursor: pointer;
+    }
+    
+    .media-load-more:hover {
+      border-color: rgba(0,0,0,0.35);
+    }
+    
+    /* ==================================================
+       Responsive — Tablet
+       ================================================== */
+    @media (max-width: 1100px) {
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* ==================================================
+       Responsive — Mobile
+       ================================================== */
+    @media (max-width: 1000px) {
+      nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background: inherit;
+        backdrop-filter: blur(6px);
+        z-index: 20;
+      }
+    
+      nav a {
+        font-size: 0.85rem;
+      }
+    
+      main {
+        width: 90%;
+        min-width: unset;
+        margin: 0 auto;
+      }
+    
+      .page-section {
+        padding: 14vh 0;
+      }
+    
+      #intro.page-section {
+        min-height: auto;
+        padding: 4rem 0;
+      }
+    
+      .intro-grid {
+        grid-template-columns: 1fr;
+        row-gap: 0.75rem;
+      }
+    
+      .intro-grid img {
+        width: 140px;
+        margin: 0 auto;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .media-item {
+        min-height: unset;
+        padding: 1.4rem 1.2rem;
+      }
+    
+      .media-title {
+        font-size: 0.95rem;
+        line-height: 1.3;
+      }
+    
+      .media-body {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        -webkit-line-clamp: 3;
+      }
+    
+      .media-type {
+        font-size: 0.6rem;
+        margin-bottom: 0.25rem;
+      }
+    
+      .media-meta {
+        font-size: 0.65rem;
+      }
+    }
+    </style>
 </head>
 
 <body>
@@ -232,58 +398,323 @@
         production-grade machine learning systems. My work sits at the intersection
         of research, infrastructure, and real-world deployment.
       </p>
+      <div class="intro-socials">
+
+        <!-- X -->
+        <a href="https://x.com/preetamkdutta" aria-label="X">
+          <svg viewBox="0 0 24 24">
+            <path d="M18.9 2H22l-6.7 7.7L23 22h-6.1l-4.8-6.3L6.7 22H2l7.1-8.2L1 2h6.2l4.4 5.8L18.9 2z"/>
+          </svg>
+        </a>
+  
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/preetamkdutta" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm8 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-5v-7.4c0-1.8 0-4.2-2.6-4.2-2.6 0-3 2-3 4.1V24H8V8z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+<a href="https://youtube.com/@preetamkdutta" aria-label="YouTube">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M23 7.2c0-1.8-1.3-3.3-3.1-3.6C17.3 3 12 3 12 3s-5.3 0-7.9.6C2.3 3.9 1 5.4 1 7.2v9.6c0 1.8 1.3 3.3 3.1 3.6 2.6.6 7.9.6 7.9.6s5.3 0 7.9-.6c1.8-.3 3.1-1.8 3.1-3.6V7.2zm-13 8.1V8.7l6 3.3-6 3.3z"/>
+  </svg>
+</a>
+
+        <!-- Bluesky -->
+        <a href="https://bsky.app/profile/preetamkdutta.bsky.social" aria-label="Bluesky">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 11.1c-.6-1.1-2.3-3.3-4-4.5C6.1 5.4 5.4 5.2 5.1 5.4c-.4.2-.5.9-.5 1.3 0 .4.2 3.5.4 4.1.6 2 2.7 2.7 4.5 2.5-2.7.4-3.2 2.1-2.1 3.5 1.2 1.6 3.4 1.1 4.5-.1.7-.7 1-1.4 1-1.4s.3.7 1 1.4c1.1 1.2 3.3 1.7 4.5.1 1.1-1.4.6-3.1-2.1-3.5 1.8.2 3.9-.5 4.5-2.5.2-.6.4-3.7.4-4.1 0-.4-.1-1.1-.5-1.3-.3-.2-1 0-2.8 1.2-1.7 1.2-3.4 3.4-4 4.6z"/>
+          </svg>
+        </a>
+  
+        <!-- Instagram -->
+        <a href="https://instagram.com/preetamkdutta" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm6.1-.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
+          </svg>
+        </a>
+  
+      </div>
     </div>
   </section>
 
   <section id="biography" class="page-section">
-    <h2>Biography</h2>
+    <h2>Biography</h2>  
     <p>
-      Preetam Dutta is the Co-Founder and CEO of an early-stage AI company focused
-      on building secure machine learning systems for production environments.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+      Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed,
+      dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper
+      congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est
+      eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu
+      massa, scelerisque vitae, consequat in, pretium a, enim.
     </p>
+  
     <p>
-      He received his PhD in Computer Science from Columbia University, where his
-      research focused on machine learning security and adversarial robustness.
+      Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras
+      vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio
+      eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
+      primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
+      Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non
+      diam sodales hendrerit.
     </p>
+  
     <p>
-      Prior to his doctoral studies, he earned a BS in Computer Science from Yale.
+      Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel
+      massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus
+      aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula.
+      Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet
+      pellentesque diam. Integer quis metus vitae elit lobortis egestas.
     </p>
+    <div class="theorem">
+      <strong>Theorema.</strong><br>
+      <em>
+        Per scientiam et industriam, systemata fiducia digna ex incertitudine
+        construuntur.
+      </em>
+    </div>
   </section>
 
   <section id="media" class="page-section">
     <h2>Media</h2>
-    <ul>
-      <li>Featured in <em>TechCrunch</em> and <em>VentureBeat</em></li>
-      <li>Podcast guest on AI security and deployment</li>
-      <li>Keynote speaker on secure and responsible AI</li>
-    </ul>
-  </section>
+  
+    <div class="media-grid">
+
+      <!-- =======================
+           Item 1 — BBC Audio
+           ======================= -->
+      <article class="media-item">
+        <div class="media-header">
+          <span class="media-source">BBC</span>
+        </div>
+    
+        <h3 class="media-title">
+          De spe atque metu circa intelligentiam artificialem
+        </h3>
+    
+        <p class="media-body">
+          Disputatio publica de fiducia, periculo, et moderatione
+          systematum intelligentium.
+        </p>
+    
+        <div class="media-type">
+          Audio
+        </div>
+    
+        <div class="media-meta">
+          <span>January 20, 2026</span>
+        </div>
+      </article>
+    
+      <!-- =======================
+           Item 2 — NYTimes Article
+           ======================= -->
+      <article class="media-item">
+        <div class="media-header">
+          <span class="media-source">NYT</span>
+        </div>
+    
+        <h3 class="media-title">
+          De spe atque metu circa intelligentiam artificialem
+        </h3>
+    
+        <p class="media-body">
+          Colloquium radiophonicum de spe publica et timore technologico explorans.
+        </p>
+    
+        <div class="media-type">
+          Article
+        </div>
+    
+        <div class="media-meta">
+          <span>January 16, 2026</span>
+        </div>
+      </article>
+    
+      <!-- =======================
+           Item 2 — NYTimes Article
+           ======================= -->
+           <article class="media-item">
+            <div class="media-header">
+              <span class="media-source">ABC</span>
+            </div>
+        
+            <h3 class="media-title">
+              Duis arcu
+      massa, scelerisque vitae
+            </h3>
+        
+            <p class="media-body">
+              Proin porttitor, orci nec nonummy molestie, enim est
+      eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
+            </p>
+        
+            <div class="media-type">
+              Article
+            </div>
+        
+            <div class="media-meta">
+              <span>January 14, 2026</span>
+            </div>
+          </article>
+    
+      <!-- =======================
+           Hidden Items
+           ======================= -->
+
+           <article class="media-item is-hidden">
+        <div class="media-header">
+          <span class="media-source">NYT</span>
+        </div>
+    
+        <h3 class="media-title">
+          De spe atque metu circa intelligentiam artificialem
+        </h3>
+    
+        <p class="media-body">
+          Disputatio de potestate, moderatione, et officio humano.
+        </p>
+    
+        <div class="media-type">
+          Article
+        </div>
+    
+        <div class="media-meta">
+          <span>January 10, 2026</span>
+        </div>
+      </article>
+    
+
+           <article class="media-item is-hidden">
+            <div class="media-header">
+              <span class="media-source">CBS</span>
+            </div>
+        
+            <h3 class="media-title is-hidden">
+              De spe atque metu circa intelligentiam artificialem
+            </h3>
+        
+            <p class="media-body">
+              Disputatio de potestate, moderatione, et officio humano.
+            </p>
+        
+            <div class="media-type">
+              Article
+            </div>
+        
+            <div class="media-meta">
+              <span>December 22, 2025</span>
+            </div>
+          </article>
+
+          <article class="media-item is-hidden">
+            <div class="media-header">
+              <span class="media-source">FOX NEWS</span>
+            </div>
+        
+            <h3 class="media-title is-hidden">
+              Maecenas adipiscing ante non
+      diam sodales hendrerit.
+            </h3>
+        
+            <p class="media-body">
+              Disputatio de potestate, moderatione, et officio humano.
+            </p>
+        
+            <div class="media-type">
+              Article
+            </div>
+        
+            <div class="media-meta">
+              <span>December 1, 2025</span>
+            </div>
+          </article>
+
+    </div>
+    
+    <button class="media-load-more" id="loadMore">
+      Load more
+    </button>
 
   <section id="writing" class="page-section">
     <h2>Writing</h2>
-    <ul>
-      <li>Secure AI in Production</li>
-      <li>The Future of Adversarial Machine Learning</li>
+    <ul class="bibliography">
+      <li>
+        <strong>Book Title TK</strong><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </li>
+      <li>
+        <strong>Book Title TK</strong><br>
+        Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+      </li>
     </ul>
   </section>
 
-  <section id="research" class="page-section">
-    <h2>Research</h2>
-    <p>
-      300+ citations ·
-      <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ">Google Scholar</a>
-    </p>
-  </section>
+ <section id="research" class="page-section">
+  <h2>Research</h2>
+
+ 
+  <ul class="bibliography">
+
+    <li>
+      <span class="author">Dutta, P. et al.</span><br>
+      <span class="title">Privacy and Synthetic Datasets.</span><br>
+      <span class="journal">
+        Explores the legal and technical trade-offs of data sharing using synthetic
+        datasets, arguing for privacy-preserving mechanisms that enable scientific
+        progress without regulatory overreach.
+      </span><br>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:u5HHmVD_uO8C">[Link]</a>
+    </li>
+
+    <li>
+      <span class="author">Dutta, P., et al.</span><br>
+      <span class="title">
+        Methods, Systems, and Media for Testing Insider Threat Detection Systems.
+      </span><br>
+      <span class="journal">
+        Presents a framework for simulating malicious insider behavior using
+        realistic user models to evaluate the robustness of detection systems.
+      </span><br>
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:9yKSN-GCB0IC">[Link]</a>
+    </li>
+
+    <li>
+      <span class="author">Dutta, P., et al.</span><br>
+      <span class="title">
+        Simulated User Bots: Real-Time Testing of Insider Threat Detection Systems.
+      </span><br>
+      <span class="journal">
+        Introduces the SUB framework, which deploys simulated insider bots to test
+        detection systems in live enterprise environments without operational
+        disruption.
+      </span><br>
+      <a href="https://ieeexplore.ieee.org/abstract/document/8424654">[Link]</a>
+    </li>
+
+  </ul>
+
+  <p>
+    300+ citations ·
+    <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ">More research papers.</a>
+  </p>
+</section>
 
   <footer>
-    <p>
-      <a href="https://x.com/preetamkdutta">X</a> ·
-      <a href="https://linkedin.com/in/preetamdutta">LinkedIn</a>
-    </p>
     <p>© 2026 Preetam Dutta</p>
   </footer>
 
 </main>
+<script>
+  const button = document.getElementById("loadMore");
+  const hiddenItems = document.querySelectorAll(".media-item.is-hidden");
 
+  button.addEventListener("click", () => {
+    hiddenItems.forEach(item => {
+      item.classList.remove("is-hidden");
+    });
+    button.style.display = "none";
+  });
+</script>
 </body>
 </html>
