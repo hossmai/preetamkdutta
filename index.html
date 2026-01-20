@@ -13,72 +13,155 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 
-  <style>
-    /* --- Layout --- */
-    body {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 3rem;
-    }
-
-    /* --- Left Nav --- */
+<style>
+  /* ===============================
+     Base Typography
+     =============================== */
+  body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-weight: 400;
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  
+  h3 {
+    font-weight: 400;
+  }
+  
+  p {
+    margin: 1.2rem 0;
+  }
+  
+  .author {
+    font-style: normal;
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+  
+  /* ===============================
+     Left Nav
+     =============================== */
+  nav {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+  
+  nav a {
+    display: block;
+    text-decoration: none;
+    opacity: 0.55;
+  }
+  
+  nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  /* ===============================
+     Main Content Column
+     =============================== */
+  main {
+    width: 50vw;
+    max-width: 900px;
+    min-width: 600px;
+    margin-left: calc(180px + 6rem);
+    margin-right: auto;
+  }
+  
+  /* ===============================
+     Page Sections
+     =============================== */
+  .page-section {
+    min-height: 100vh;
+    padding: 20vh 0;
+  }
+  
+  section {
+    scroll-margin-top: 12vh;
+  }
+  
+  /* ===============================
+     INTRO LAYOUT (SIMPLE GRID)
+     =============================== */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  /* Normal image, untouched */
+  .intro-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Limit text width slightly */
+  .intro-text {
+    max-width: 600px;
+  }
+  
+  /* ===============================
+     Lists
+     =============================== */
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  li {
+    margin-bottom: 1.2rem;
+  }
+  
+  /* ===============================
+     Mobile
+     =============================== */
+  @media (max-width: 1000px) {
     nav {
-      position: fixed;
-      top: 3rem;
-      left: 2rem;
-      width: 180px;
-      font-size: 0.95rem;
-      line-height: 1.8;
+      position: static;
+      transform: none;
+      width: auto;
+      margin: 2rem auto;
+      text-align: center;
     }
-
-    nav a {
-      display: block;
-      text-decoration: none;
-      opacity: 0.75;
-    }
-
-    nav a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    /* --- Main Content --- */
+  
     main {
-      grid-column: 2;
-      max-width: 700px;
+      width: 90%;
+      min-width: unset;
+      margin: 0 auto;
     }
-
-    header {
-      margin-top: 3rem;
+  
+    .page-section {
+      min-height: auto;
+      padding: 4rem 0;
     }
-
-    /* --- Section spacing --- */
-    section {
-      scroll-margin-top: 2rem;
+  
+    .intro-grid {
+      grid-template-columns: 1fr;
     }
-
-    /* --- Mobile: collapse nav --- */
-    @media (max-width: 900px) {
-      body {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        position: static;
-        width: auto;
-        margin-bottom: 2rem;
-      }
-
-      main {
-        grid-column: 1;
-      }
-    }
+  }
   </style>
-</head>
 
 <body>
 
 <nav>
+  <a href="#intro">Preetam K. Dutta</a>
   <a href="#biography">Biography</a>
   <a href="#media">Media</a>
   <a href="#writing">Writing</a>
@@ -87,17 +170,55 @@
 
 <main>
 
-<header>
-  <h1>Preetam Dutta</h1>
-  <p class="author">
-    Co-Founder & CEO · AI Founder · ML Researcher<br>
-    Columbia PhD (Machine Learning & Security)
-  </p>
-</header>
+  <section id="intro" class="page-section intro-grid">
 
-<hr>
+    <img
+      src="preetam-litho1.png"
+      alt="Portrait of Preetam Dutta"
+    >
+  
+    <div class="intro-text">
+      <h1>Preetam K Dutta, PhD</h1>
 
-<section id="writing">
+    <p>
+      I am the co-founder and CEO of an AI company focused on building secure,
+      production-grade machine learning systems. My work sits at the intersection
+      of research, infrastructure, and real-world deployment.
+    </p>
+  </section>
+  
+  <section id="biography" class="page-section">
+    <h2>Biography</h2>
+      <p>
+        Preetam Dutta is the Co-Founder and CEO of an early-stage AI company focused
+        on building secure machine learning systems for production environments.
+        His work spans machine learning, security, and large-scale deployment.
+      </p>
+    </div>
+  
+    <p>
+      He received his PhD in Computer Science from Columbia University, where his
+      research focused on machine learning security and adversarial robustness.
+      His work has appeared in top venues including NeurIPS and ICML.
+    </p>
+  
+    <p>
+      Prior to his doctoral studies, he earned a BS in Computer Science from Yale.
+      He has led production ML efforts across industry and now works at the
+      intersection of research, startups, and real-world AI deployment.
+    </p>
+  </section>
+
+<section id="media" class="page-section">
+  <h2>Media</h2>
+  <ul>
+    <li>Featured in <em>TechCrunch</em> and <em>VentureBeat</em></li>
+    <li>Podcast guest on AI security, deployment, and startup scaling</li>
+    <li>Keynote speaker on secure and responsible AI</li>
+  </ul>
+</section>
+
+<section id="writing" class="page-section">
   <h2>Writing</h2>
 
   <ul class="bibliography">
@@ -113,61 +234,25 @@
   </ul>
 </section>
 
-<hr>
-
-<section id="biography">
-  <h2>Biography</h2>
-
-  <div class="abstract">
-    <h3>Abstract</h3>
-    <p>
-      Preetam Dutta is the Co-Founder and CEO of an early-stage AI company focused
-      on building secure machine learning systems for production environments.
-      His work spans machine learning, security, and large-scale deployment.
-    </p>
-  </div>
-
-  <p>
-    He received his PhD in Computer Science from Columbia University, where his
-    research focused on machine learning security and adversarial robustness.
-    His work has appeared in top venues including NeurIPS and ICML.
-  </p>
-
-  <p>
-    Prior to his doctoral studies, he earned a BS in Computer Science from Yale.
-    He has led production ML efforts across industry and now works at the
-    intersection of research, startups, and real-world AI deployment.
-  </p>
-</section>
-
-<hr>
-
-<section id="media">
-  <h2>Media</h2>
-
-  <ul>
-    <li>Featured in <em>TechCrunch</em> and <em>VentureBeat</em></li>
-    <li>Podcast guest on AI security, deployment, and startup scaling</li>
-    <li>Keynote speaker on secure and responsible AI</li>
-  </ul>
-</section>
-
-<hr>
-
-<section id="research">
+<section id="research" class="page-section">
   <h2>Research</h2>
 
-  <div class="theorem">
     <p>
-      <strong>Theorem.</strong>
-      Robust machine learning models resist adversarial perturbations
-      under bounded \( L_\infty \) norms with high probability.
+      <strong>Privacy and synthetic datasets</strong><br>
+      <i>Sharing is a virtue, instilled in us from childhood Unfortunately, when it comes to big data-i e., databases possessing the potential to usher in a whole new world of scientific progress-the legal landscape is either too greedy or too Laissez-Faire. </i>
     </p>
-  </div>
+    <p>
+      <strong>Methods, systems, and media for testing insider threat detection systems</strong><br>
+      <i>Methods, systems, and media simulate malicious insider bots using real user behavior models to test and evaluate threat detection system efficacy.</i>
+    </p>
+    <p>
+      <strong>Simulated user bots: Real time testing of insider threat detection systems</strong><br>
+      <i>SUB framework deploys simulated insider threat bots mimicking real behaviors to test insider threat detection systems in live enterprise environments without disrupting operations.</i>
+    </p>
 
   <p>
-    Publications in NeurIPS and ICML · 500+ citations ·
-    <a href="#">Google Scholar</a>
+    300+ citations ·
+    <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ">More research papers.</a>
   </p>
 </section>
 
