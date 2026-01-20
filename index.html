@@ -12,14 +12,76 @@
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+
+  <style>
+    /* --- Layout --- */
+    body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+    }
+
+    /* --- Left Nav --- */
+    nav {
+      position: fixed;
+      top: 3rem;
+      left: 2rem;
+      width: 180px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    nav a {
+      display: block;
+      text-decoration: none;
+      opacity: 0.75;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* --- Main Content --- */
+    main {
+      grid-column: 2;
+      max-width: 700px;
+    }
+
+    header {
+      margin-top: 3rem;
+    }
+
+    /* --- Section spacing --- */
+    section {
+      scroll-margin-top: 2rem;
+    }
+
+    /* --- Mobile: collapse nav --- */
+    @media (max-width: 900px) {
+      body {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        position: static;
+        width: auto;
+        margin-bottom: 2rem;
+      }
+
+      main {
+        grid-column: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav class="top-nav">
-  <a href="#writing">Writing</a>
+<nav>
   <a href="#biography">Biography</a>
   <a href="#media">Media</a>
+  <a href="#writing">Writing</a>
   <a href="#research">Research</a>
 </nav>
 
@@ -109,8 +171,6 @@
   </p>
 </section>
 
-</main>
-
 <footer>
   <p>
     <a href="https://x.com/preetamkdutta">X</a> ·
@@ -118,6 +178,8 @@
   </p>
   <p>© 2026 Preetam Dutta</p>
 </footer>
+
+</main>
 
 </body>
 </html>
