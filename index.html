@@ -13,93 +13,277 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 
-  <style>
-    /* Hide site until auth passes */
-    body.auth-locked #site-content {
-      display: none;
-    }
-  </style>  
+<style>
+  /* ===============================
+     Custom Fonts
+     =============================== */
+  @font-face {
+    font-family: "Neue Montreal";
+    src: url("fonts/neueMontreal-book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 
-  <!-- YOUR EXISTING STYLES (UNCHANGED) -->
-  <style>
-    /* ===============================
-       Custom Fonts
-       =============================== */
-    @font-face {
-      font-family: "Neue Montreal";
-      src: url("fonts/neueMontreal-book.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
+  @font-face {
+    font-family: "Editorial New";
+    src: url("fonts/editorialNew-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* ===============================
+     Base Typography
+     =============================== */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f6f4f1;
+    color: #36454F;
+  }
+
+  /* Hero title */
+  #intro h1 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 2.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h2,
+  h3 {
+    font-family: "Editorial New", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  /* ===============================
+     Left Nav (Desktop)
+     =============================== */
+  nav {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: #4B443D;
+    opacity: 0.55;
+    font-weight: 400;
+    transition: font-weight 0.15s ease, opacity 0.15s ease;
+  }
+
+  nav a:hover {
+    opacity: 1;
+    font-weight: 600;
+  }
+
+  /* ===============================
+     Main Content Column
+     =============================== */
+  main {
+    width: 50vw;
+    max-width: 900px;
+    min-width: 600px;
+    margin-left: calc(180px + 6rem);
+    margin-right: auto;
+  }
+
+  /* ===============================
+     Page Sections (Desktop)
+     =============================== */
+  .page-section {
+    min-height: 100vh;
+    padding: 20vh 0;
+  }
+
+  section {
+    scroll-margin-top: 12vh;
+  }
+
+  /* ===============================
+     Intro Layout (Desktop)
+     =============================== */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .intro-grid img {
+    width: 260px;
+    height: auto;
+    display: block;
+  }
+
+  .intro-text {
+    max-width: 600px;
+  }
+
+  /* ===============================
+     Lists
+     =============================== */
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 1.2rem;
+  }
+
+  /* ===============================
+     Mobile
+     =============================== */
+  @media (max-width: 1000px) {
+
+    nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: inherit;
+      backdrop-filter: blur(6px);
+      z-index: 20;
     }
 
-    @font-face {
-      font-family: "Editorial New";
-      src: url("fonts/editorialNew-regular.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
+    nav a {
+      font-size: 0.85rem;
     }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f6f4f1;
-      color: #36454F;
+    main {
+      width: 90%;
+      min-width: unset;
+      margin: 0 auto;
     }
 
-    /* (rest of your styles remain exactly the same) */
-  </style>
+    .page-section {
+      min-height: 100vh;
+      padding: 14vh 0;
+    }
+
+    /* Intro is NOT full-screen on mobile */
+    #intro.page-section {
+      min-height: auto;
+      padding: 4rem 0;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr;
+      row-gap: 0.75rem;
+      align-items: start;
+    }
+
+    .intro-grid img {
+      width: 140px;
+      margin: 0 auto;
+    }
+
+    .intro-text {
+      max-width: none;
+    }
+  }
+</style>
 </head>
 
-<body class="auth-locked">
+<body>
 
-<!-- 🔑 PASSWORD SCRIPT (RUNS IMMEDIATELY) -->
-<script>
-  (function () {
-    const PASSWORD = "hossrules";
-    const key = "site-auth";
+<nav>
+  <a href="#intro">Preetam K. Dutta</a>
+  <a href="#biography">Biography</a>
+  <a href="#media">Media</a>
+  <a href="#writing">Writing</a>
+  <a href="#research">Research</a>
+</nav>
 
-    if (sessionStorage.getItem(key) === PASSWORD) {
-      document.body.classList.remove("auth-locked");
-      return;
-    }
+<main>
 
-    const input = window.prompt("Enter password:");
+  <section id="intro" class="page-section intro-grid">
+    <img src="preetam-litho1.png" alt="Portrait of Preetam Dutta">
+    <div class="intro-text">
+      <h1>Preetam K Dutta, PhD</h1>
+      <p>
+        I am the co-founder and CEO of an AI company focused on building secure,
+        production-grade machine learning systems. My work sits at the intersection
+        of research, infrastructure, and real-world deployment.
+      </p>
+    </div>
+  </section>
 
-    if (input === PASSWORD) {
-      sessionStorage.setItem(key, PASSWORD);
-      document.body.classList.remove("auth-locked");
-    } else {
-      document.body.innerHTML = `
-        <div style="padding:3rem;font-family:sans-serif">
-          <h2>Access denied</h2>
-          <p>Incorrect password.</p>
-        </div>
-      `;
-    }
-  })();
-</script>
+  <section id="biography" class="page-section">
+    <h2>Biography</h2>
+    <p>
+      Preetam Dutta is the Co-Founder and CEO of an early-stage AI company focused
+      on building secure machine learning systems for production environments.
+    </p>
+    <p>
+      He received his PhD in Computer Science from Columbia University, where his
+      research focused on machine learning security and adversarial robustness.
+    </p>
+    <p>
+      Prior to his doctoral studies, he earned a BS in Computer Science from Yale.
+    </p>
+  </section>
 
-<!-- 🔒 PROTECTED CONTENT -->
-<div id="site-content">
+  <section id="media" class="page-section">
+    <h2>Media</h2>
+    <ul>
+      <li>Featured in <em>TechCrunch</em> and <em>VentureBeat</em></li>
+      <li>Podcast guest on AI security and deployment</li>
+      <li>Keynote speaker on secure and responsible AI</li>
+    </ul>
+  </section>
 
-  <!-- EVERYTHING BELOW IS UNCHANGED -->
+  <section id="writing" class="page-section">
+    <h2>Writing</h2>
+    <ul>
+      <li>Secure AI in Production</li>
+      <li>The Future of Adversarial Machine Learning</li>
+    </ul>
+  </section>
 
-  <nav>
-    <a href="#intro">Preetam K. Dutta</a>
-    <a href="#biography">Biography</a>
-    <a href="#media">Media</a>
-    <a href="#writing">Writing</a>
-    <a href="#research">Research</a>
-  </nav>
+  <section id="research" class="page-section">
+    <h2>Research</h2>
+    <p>
+      300+ citations ·
+      <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ">Google Scholar</a>
+    </p>
+  </section>
 
-  <main>
-    <!-- your sections exactly as before -->
-  </main>
+  <footer>
+    <p>
+      <a href="https://x.com/preetamkdutta">X</a> ·
+      <a href="https://linkedin.com/in/preetamdutta">LinkedIn</a>
+    </p>
+    <p>© 2026 Preetam Dutta</p>
+  </footer>
 
-</div>
+</main>
 
 </body>
 </html>
