@@ -172,7 +172,33 @@ a:hover {
     li {
       margin-bottom: 1.2rem;
     }
-    
+
+    /* ==================================================
+   Hero Portrait — Circular Frame
+   ================================================== */
+.intro-portrait {
+  width: 260px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* subtle editorial framing */
+  background: #efece6;
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.35);
+}
+
+.intro-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
     /* ==================================================
        Intro Social Icons
        ================================================== */
@@ -349,15 +375,16 @@ a:hover {
         padding: 4rem 0;
       }
     
-      .intro-grid {
-        grid-template-columns: 1fr;
-        row-gap: 0.75rem;
-      }
-    
-      .intro-grid img {
-        width: 140px;
-        margin: 0 auto;
-      }
+        .intro-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0.75rem;
+  }
+
+  /* Hero portrait — mobile sizing */
+  .intro-portrait {
+    width: 140px;
+    margin: 0 auto;
+  }
     }
     
     @media (max-width: 640px) {
@@ -390,6 +417,76 @@ a:hover {
         font-size: 0.65rem;
       }
     }
+
+
+  /* ===============================
+   Talks Layout
+   =============================== */
+.talks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talk-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+  align-items: flex-start;
+}
+
+/* ===============================
+   Thumbnail Container — 16:9
+   =============================== */
+   .talk-thumb {
+  position: relative;
+  width: 128px;        /* controls visual size */
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Base image: monochrome */
+.talk-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.03) brightness(1.15);
+  display: block;
+  
+}
+
+/* ===============================
+   Overlay Base
+   =============================== */
+   .talk-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.30;
+  pointer-events: none;
+}
+
+/* ===============================
+   Overlay Variants (lightened)
+   =============================== */
+
+/* #115555 → softened dark teal */
+.overlay-teal-dark .talk-thumb::after {
+  background: rgb(17, 85, 85);
+}
+
+/* #11bbbb → airy teal */
+.overlay-teal-light .talk-thumb::after {
+  background: rgb(17, 187, 187);
+}
+
+/* #bb11bb → muted magenta */
+.overlay-magenta .talk-thumb::after {
+  background: rgb(187, 17, 187);
+}
     </style>
 </head>
 
@@ -399,14 +496,16 @@ a:hover {
   <a href="#intro">Preetam K. Dutta</a>
   <a href="#biography">Biography</a>
   <a href="#media">Media</a>
-  <a href="#writing">Writing</a>
+  <a href="#talk">Talks</a>
   <a href="#research">Research</a>
 </nav>
 
 <main>
 
   <section id="intro" class="page-section intro-grid">
-    <img src="preetam-litho1.png" alt="Portrait of Preetam Dutta">
+    <div class="intro-portrait">
+      <img src="preetam-og.jpg" alt="Portrait of Preetam Dutta">
+    </div>
     <div class="intro-text">
       <h1>Preetam K Dutta, PhD</h1>
       <p>
@@ -652,19 +751,42 @@ a:hover {
       Load more
     </button>
 
-  <section id="writing" class="page-section">
-    <h2>Writing</h2>
-    <ul class="bibliography">
-      <li>
-        <strong>Book Title TK</strong><br>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </li>
-      <li>
-        <strong>Book Title TK</strong><br>
-        Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-      </li>
-    </ul>
-  </section>
+    <section id="talk" class="page-section">
+      <h2>Talks</h2><br>
+      <ul class="talks-list">
+
+        <li class="talk-item overlay-teal-dark">
+          <div class="talk-thumb">
+            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
+          </div>
+          <div class="talk-content">
+            <strong>De Machinis Intelligentibus</strong><br>
+            Oratio publica de potestate algorithmica et fiducia civili.
+          </div>
+        </li>
+      
+        <li class="talk-item overlay-teal-light">
+          <div class="talk-thumb">
+            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
+          </div>
+          <div class="talk-content">
+            <strong>De Fiducia Artificiali</strong><br>
+            Colloquium de moderatione systematum intelligentium.
+          </div>
+        </li>
+      
+        <li class="talk-item overlay-magenta">
+          <div class="talk-thumb">
+            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
+          </div>
+          <div class="talk-content">
+            <strong>De Potestate Algorithmica</strong><br>
+            Disputatio de imperio technologiae et officio humano.
+          </div>
+        </li>
+      
+      </ul>
+    </section>
 
  <section id="research" class="page-section">
   <h2>Research</h2>
@@ -673,41 +795,40 @@ a:hover {
   <ul class="bibliography">
 
     <li>
-      <span class="author">Dutta, P. et al.</span><br>
-      <span class="title">Privacy and Synthetic Datasets.</span><br>
+      <span class="author">Lucius Marcellus, A. et al.</span><br>
+      <span class="title">De Privata Notitia et Datasetis Syntheticis.</span><br>
       <span class="journal">
-        Explores the legal and technical trade-offs of data sharing using synthetic
-        datasets, arguing for privacy-preserving mechanisms that enable scientific
-        progress without regulatory overreach.
+        Tractatus de aequilibrio inter communicationem scientiae et tutela
+        informationis, proponens rationes quae progressionem academicam
+        sine excessu regulationis sustineant.
       </span><br>
-      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:u5HHmVD_uO8C">[Link]</a>
+      <a href="#">[Link]</a>
     </li>
-
+  
     <li>
-      <span class="author">Dutta, P., et al.</span><br>
+      <span class="author">Marcellus, L., et al.</span><br>
       <span class="title">
-        Methods, Systems, and Media for Testing Insider Threat Detection Systems.
+        Methodi et Systemata ad Explorationem Periculorum Internorum.
       </span><br>
       <span class="journal">
-        Presents a framework for simulating malicious insider behavior using
-        realistic user models to evaluate the robustness of detection systems.
+        Expositio structurarum ad mores adversos simulandos, quibus firmitas
+        systematum detectionis per exempla verisimilia probatur.
       </span><br>
-      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3ChKBJ0AAAAJ&citation_for_view=3ChKBJ0AAAAJ:9yKSN-GCB0IC">[Link]</a>
+      <a href="#">[Link]</a>
     </li>
-
+  
     <li>
-      <span class="author">Dutta, P., et al.</span><br>
+      <span class="author">Marcellus, L., et al.</span><br>
       <span class="title">
-        Simulated User Bots: Real-Time Testing of Insider Threat Detection Systems.
+        Automata Simulata ad Probationem Systematum in Tempore Reali.
       </span><br>
       <span class="journal">
-        Introduces the SUB framework, which deploys simulated insider bots to test
-        detection systems in live enterprise environments without operational
-        disruption.
+        Dissertatio de machinis agentibus fictis ad probationes continuas
+        exercendas, ita ut stabilitas operationum sine perturbatione servetur.
       </span><br>
-      <a href="https://ieeexplore.ieee.org/abstract/document/8424654">[Link]</a>
+      <a href="#">[Link]</a>
     </li>
-
+  
   </ul>
 
   <p>
