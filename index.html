@@ -1,857 +1,660 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="latex-dark-auto">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preetam K Dutta PhD</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ==================================================
-       External Styles
-       ================================================== -->
-  <!-- LaTeX.css -->
-  <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <title>Preetam K. Dutta, PhD — Biography, Speaking, Research</title>
+    <meta
+      name="description"
+      content="Preetam K. Dutta, PhD is a founder and CEO building secure, production-grade AI systems. Biography, speaking topics, and research."
+    />
+    <meta name="robots" content="index,follow" />
 
-  <style>
-    /* ==================================================
-       Custom Fonts
-       ================================================== */
-    @font-face {
-      font-family: "Neue Montreal";
-      src: url("fonts/neueMontreal-book.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    
-    @font-face {
-      font-family: "Editorial New";
-      src: url("fonts/editorialNew-regular.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    
-    /* ==================================================
-       Base Typography & Global Styles
-       ================================================== */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background: #f6f4f1;
-      color: #36454F;
-    }
+    <!-- <link rel="canonical" href="https://preetamkdutta.com/" /> -->
 
-    /* ==================================================
-   Global Link Reset
-   ================================================== */
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    <!-- Open Graph / Twitter (recommended)
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Preetam K. Dutta, PhD" />
+    <meta property="og:description" content="Founder and CEO building secure, production-grade AI systems. Bio, speaking topics, and research." />
+    <meta property="og:url" content="https://preetamkdutta.com/" />
+    <meta property="og:image" content="https://preetamkdutta.com/preetam-og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@preetamkdutta" />
+    -->
 
-a:visited {
-  color: inherit;
-}
+    <link rel="preconnect" href="https://latex.vercel.app" crossorigin />
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
 
-a:hover {
-  text-decoration: underline;
-}
-    
-    /* ==================================================
-       Headings
-       ================================================== */
-    #intro h1 {
-      font-family: "Editorial New", Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-bottom: 0.75rem;
-    }
-    
-    h1 {
-      font-family: "Editorial New", Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      font-size: 2.6rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    h2,
-    h3 {
-      font-family: "Editorial New", Georgia, "Times New Roman", serif;
-      font-weight: 400;
-    }
-    
-    p {
-      margin: 1rem 0;
-    }
-    
-    /* ==================================================
-       Navigation (Desktop)
-       ================================================== */
-    nav {
-      position: fixed;
-      left: 2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 180px;
-      font-size: 0.9rem;
-      line-height: 2;
-    }
-    
-    nav a {
-      display: block;
-      text-decoration: none;
-      color: #4B443D;
-      opacity: 0.55;
-      font-weight: 400;
-      transition: font-weight 0.15s ease, opacity 0.15s ease;
-    }
-    
-    nav a:hover {
-      opacity: 1;
-      font-weight: 600;
-    }
-    
-    /* ==================================================
-       Main Content Column
-       ================================================== */
-    main {
-      width: 50vw;
-      max-width: 900px;
-      min-width: 600px;
-      margin-left: calc(180px + 6rem);
-      margin-right: auto;
-    }
-    
-    /* ==================================================
-       Page Sections
-       ================================================== */
-    .page-section {
-      min-height: 100vh;
-      padding: 20vh 0;
-    }
-    
-    section {
-      scroll-margin-top: 12vh;
-    }
-    
-    /* ==================================================
-       Intro Section Layout
-       ================================================== */
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    
-    .intro-grid img {
-      width: 260px;
-      height: auto;
-      display: block;
-    }
-    
-    .intro-text {
-      max-width: 600px;
-    }
-    
-    /* ==================================================
-       Lists
-       ================================================== */
-    ul {
-      padding-left: 1.2rem;
-    }
-    
-    li {
-      margin-bottom: 1.2rem;
-    }
+    <link
+      rel="preload"
+      href="fonts/neueMontreal-book.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/editorialNew-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-    /* ==================================================
-   Hero Portrait — Circular Frame
-   ================================================== */
-.intro-portrait {
-  width: 260px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* subtle editorial framing */
-  background: #efece6;
-  box-shadow:
-    0 10px 28px rgba(0,0,0,0.12),
-    inset 0 0 0 1px rgba(255,255,255,0.35);
-}
-
-.intro-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-    /* ==================================================
-       Intro Social Icons
-       ================================================== */
-    .intro-socials {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
-      margin-top: 1.25rem;
-    }
-    
-    .intro-socials a {
-      display: inline-flex;
-      align-items: center;
-      color: #4B443D;
-      opacity: 0.55;
-      transition: opacity 0.15s ease;
-    }
-    
-    .intro-socials a:hover {
-      opacity: 0.9;
-    }
-    
-    .intro-socials svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-    }
-    
-    /* ==================================================
-       Media Grid
-       ================================================== */
-    .media-grid {
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.2rem;
-    }
-    
-    .media-item {
-      min-height: 320px;
-      padding: 1.8rem 1.7rem 1.6rem;
-      border-radius: 16px;
-      border: 1px solid rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* ==================================================
-       Media Header
-       ================================================== */
-    .media-header {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .media-source {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.6;
-    }
-    
-    /* ==================================================
-       Media Typography
-       ================================================== */
-    .media-title {
-      font-family: "Editorial New", serif;
-      font-size: 0.95rem;
-      line-height: 1.25;
-      margin: 0 0 0.5rem 0;
-      letter-spacing: -0.01em;
-    }
-    
-    .media-body {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      opacity: 0.82;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      margin-bottom: 1.2rem;
-    }
-    
-    .media-type {
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.6;
-      margin-top: auto;
-      margin-bottom: 0.35rem;
-      white-space: nowrap;
-    }
-    
-    .media-meta {
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      opacity: 0.55;
-      white-space: nowrap;
-    }
-    
-    /* ==================================================
-       Load More
-       ================================================== */
-    .media-item.is-hidden {
-      display: none;
-    }
-    
-    .media-load-more {
-      margin: 3rem auto 0;
-      display: block;
-      background: transparent;
-      border: 1px solid rgba(0,0,0,0.18);
-      border-radius: 999px;
-      padding: 0.75rem 1.6rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #4B443D;
-      cursor: pointer;
-    }
-    
-    .media-load-more:hover {
-      border-color: rgba(0,0,0,0.35);
-    }
-    
-    /* ==================================================
-       Responsive — Tablet
-       ================================================== */
-    @media (max-width: 1100px) {
-      .media-grid {
-        grid-template-columns: repeat(2, 1fr);
+    <style>
+      @font-face {
+        font-family: "Neue Montreal";
+        src: url("fonts/neueMontreal-book.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
       }
-    }
-    
-    /* ==================================================
-       Responsive — Mobile
-       ================================================== */
-    @media (max-width: 1000px) {
-      nav {
-        position: sticky;
-        top: 0;
-        left: 0;
-        transform: none;
+
+      @font-face {
+        font-family: "Editorial New";
+        src: url("fonts/editorialNew-regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :root {
+        --text-base: clamp(1.1875rem, calc(1.0781rem + 0.47vw), 1.5rem);
+        --scroll-offset: 6vh;
+      }
+
+      @media (max-width: 1200px) {
+        :root {
+          --scroll-offset: 14vh;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+
+        /* Undo LaTeX.css document column constraints */
+        max-width: none;
         width: 100%;
-        padding: 1rem 0;
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        background: inherit;
-        backdrop-filter: blur(6px);
-        z-index: 20;
+
+        font-family: "Neue Montreal", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 400;
+        font-size: var(--text-base);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        background: #f6f4f1;
+        color: #36454f;
       }
-    
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      strong,
+      b {
+        font-size: 0.9em;
+        font-weight: 600;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: inherit;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid rgba(54, 69, 79, 0.55);
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+
+      .skip-link {
+        position: absolute;
+        inset-block-start: 0.75rem;
+        inset-inline-start: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        background: #f6f4f1;
+        color: #36454f;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+        transform: translateY(-200%);
+        transition: transform 0.15s ease;
+        z-index: 100;
+      }
+
+      .skip-link:focus-visible {
+        transform: translateY(0);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Editorial New", Georgia, "Times New Roman", serif;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0 0.75rem;
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+
+      nav {
+        position: fixed;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 180px;
+        line-height: clamp(1.8, 2vw, 2);
+      }
+
       nav a {
-        font-size: 0.85rem;
+        display: block;
+        color: #4b443d;
+        opacity: 0.55;
+        font-weight: 400;
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        letter-spacing: clamp(0px, 0.03vw, 0.4px);
+        transition: font-weight 0.15s ease, opacity 0.15s ease;
       }
-    
+
+      nav a:hover {
+        opacity: 1;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
       main {
-        width: 90%;
-        min-width: unset;
-        margin: 0 auto;
+        width: clamp(30rem, 50vw, 56.25rem);
+        margin-inline: auto;
       }
-    
+
+      section {
+        scroll-margin-top: var(--scroll-offset);
+      }
+
       .page-section {
-        padding: 14vh 0;
+        min-height: 100svh;
+        padding-block: 12vh;
       }
-    
-      #intro.page-section {
-        min-height: auto;
-        padding: 4rem 0;
-      }
-    
-        .intro-grid {
-    grid-template-columns: 1fr;
-    row-gap: 0.75rem;
-  }
 
-  /* Hero portrait — mobile sizing */
-  .intro-portrait {
-    width: 140px;
-    margin: 0 auto;
-  }
-    }
-    
-    @media (max-width: 640px) {
-      .media-grid {
-        grid-template-columns: 1fr;
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 4rem;
+        align-items: center;
       }
-    
-      .media-item {
-        min-height: unset;
-        padding: 1.4rem 1.2rem;
+
+      .intro-text {
+        max-width: 600px;
       }
-    
-      .media-title {
-        font-size: 0.95rem;
-        line-height: 1.3;
+
+      .intro-portrait {
+        width: 260px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #efece6;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.35);
       }
-    
-      .media-body {
-        font-size: 0.8rem;
+
+      .intro-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .intro-socials {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        margin-top: 1.25rem;
+      }
+
+      .intro-socials a {
+        display: inline-flex;
+        align-items: center;
+        color: #4b443d;
+        opacity: 0.55;
+        transition: opacity 0.15s ease;
+      }
+
+      .intro-socials a:hover {
+        opacity: 0.9;
+      }
+
+      .intro-socials svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      li {
+        margin-bottom: 1.2rem;
+      }
+
+      #biography .theorem {
+        margin-top: 2rem;
+      }
+
+      .theorem-title,
+      .theorem-body {
+        display: block;
+      }
+
+      .speaker-about {
+        max-width: 78ch;
+        margin-bottom: 1.25rem;
+      }
+
+      .speaker-grid {
+        display: grid;
+        grid-template-columns: 1.55fr 0.95fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .speaker-right {
+        padding-left: 1.5rem;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      .talk + .talk {
+        margin-top: 1.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+      }
+
+      .talk h4 {
+        margin-bottom: 0.35rem;
+      }
+
+      .talk p {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        max-width: 78ch;
+      }
+
+      .talk ul {
+        margin: 0;
+        padding-left: 1.1rem;
+      }
+
+      .host-intro {
+        font-size: 0.95em;
         line-height: 1.45;
-        -webkit-line-clamp: 3;
       }
-    
-      .media-type {
-        font-size: 0.6rem;
-        margin-bottom: 0.25rem;
+
+      @media (max-width: 900px) {
+        .speaker-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .speaker-right {
+          padding-left: 0;
+          border-left: none;
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          padding-top: 1.25rem;
+        }
       }
-    
-      .media-meta {
-        font-size: 0.65rem;
+
+      @media (max-width: 1200px) {
+        nav {
+          position: sticky;
+          top: 0;
+          left: 0;
+          transform: none;
+          width: 100%;
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          background: inherit;
+          backdrop-filter: blur(6px);
+          z-index: 20;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          flex-wrap: nowrap;
+        }
+
+        nav a {
+          font-size: 0.85rem;
+        }
+
+        main {
+          width: 90%;
+        }
+
+        .page-section {
+          padding-block: 14vh;
+        }
+
+        #intro.page-section {
+          min-height: auto;
+          padding-block: 4rem;
+        }
+
+        .intro-grid {
+          grid-template-columns: 1fr;
+          row-gap: 0.75rem;
+        }
+
+        .intro-portrait {
+          width: 140px;
+          margin-inline: auto;
+        }
       }
-    }
-
-
-  /* ===============================
-   Talks Layout
-   =============================== */
-.talks-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.talk-item {
-  display: flex;
-  gap: 1.2rem;
-  margin-bottom: 1.6rem;
-  align-items: flex-start;
-}
-
-/* ===============================
-   Thumbnail Container — 16:9
-   =============================== */
-   .talk-thumb {
-  position: relative;
-  width: 128px;        /* controls visual size */
-  aspect-ratio: 16 / 9;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-/* Base image: monochrome */
-.talk-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%) contrast(1.03) brightness(1.15);
-  display: block;
-  
-}
-
-/* ===============================
-   Overlay Base
-   =============================== */
-   .talk-thumb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  mix-blend-mode: multiply;
-  opacity: 0.30;
-  pointer-events: none;
-}
-
-/* ===============================
-   Overlay Variants (lightened)
-   =============================== */
-
-/* #115555 → softened dark teal */
-.overlay-teal-dark .talk-thumb::after {
-  background: rgb(17, 85, 85);
-}
-
-/* #11bbbb → airy teal */
-.overlay-teal-light .talk-thumb::after {
-  background: rgb(17, 187, 187);
-}
-
-/* #bb11bb → muted magenta */
-.overlay-magenta .talk-thumb::after {
-  background: rgb(187, 17, 187);
-}
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-<nav>
-  <a href="#intro">Preetam K. Dutta</a>
-  <a href="#biography">Biography</a>
-  <a href="#media">Media</a>
-  <a href="#talk">Talks</a>
-  <a href="#research">Research</a>
-</nav>
+    <nav aria-label="Primary">
+      <a href="#intro">Preetam K. Dutta</a>
+      <a href="#biography">Biography</a>
+      <a href="#speaker">Speaker</a>
+      <a href="#research">Research</a>
+    </nav>
 
-<main>
-
-  <section id="intro" class="page-section intro-grid">
-    <div class="intro-portrait">
-      <img src="preetam-og.jpg" alt="Portrait of Preetam Dutta">
-    </div>
-    <div class="intro-text">
-      <h1>Preetam K Dutta, PhD</h1>
-      <p>
-        I am the co-founder and CEO of an AI company focused on building secure,
-        production-grade machine learning systems. My work sits at the intersection
-        of research, infrastructure, and real-world deployment.
-      </p>
-      <div class="intro-socials">
-
-        <!-- X -->
-        <a href="https://x.com/preetamkdutta" aria-label="X">
-          <svg viewBox="0 0 24 24">
-            <path d="M18.9 2H22l-6.7 7.7L23 22h-6.1l-4.8-6.3L6.7 22H2l7.1-8.2L1 2h6.2l4.4 5.8L18.9 2z"/>
-          </svg>
-        </a>
-  
-        <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/preetamkdutta" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24">
-            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm8 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-5v-7.4c0-1.8 0-4.2-2.6-4.2-2.6 0-3 2-3 4.1V24H8V8z"/>
-          </svg>
-        </a>
-
-        <!-- YouTube -->
-<a href="https://youtube.com/@preetamkdutta" aria-label="YouTube">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M23 7.2c0-1.8-1.3-3.3-3.1-3.6C17.3 3 12 3 12 3s-5.3 0-7.9.6C2.3 3.9 1 5.4 1 7.2v9.6c0 1.8 1.3 3.3 3.1 3.6 2.6.6 7.9.6 7.9.6s5.3 0 7.9-.6c1.8-.3 3.1-1.8 3.1-3.6V7.2zm-13 8.1V8.7l6 3.3-6 3.3z"/>
-  </svg>
-</a>
-
-        <!-- Bluesky -->
-        <a href="https://bsky.app/profile/preetamkdutta.bsky.social" aria-label="Bluesky">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 11.1c-.6-1.1-2.3-3.3-4-4.5C6.1 5.4 5.4 5.2 5.1 5.4c-.4.2-.5.9-.5 1.3 0 .4.2 3.5.4 4.1.6 2 2.7 2.7 4.5 2.5-2.7.4-3.2 2.1-2.1 3.5 1.2 1.6 3.4 1.1 4.5-.1.7-.7 1-1.4 1-1.4s.3.7 1 1.4c1.1 1.2 3.3 1.7 4.5.1 1.1-1.4.6-3.1-2.1-3.5 1.8.2 3.9-.5 4.5-2.5.2-.6.4-3.7.4-4.1 0-.4-.1-1.1-.5-1.3-.3-.2-1 0-2.8 1.2-1.7 1.2-3.4 3.4-4 4.6z"/>
-          </svg>
-        </a>
-  
-        <!-- Instagram -->
-        <a href="https://instagram.com/preetamkdutta" aria-label="Instagram">
-          <svg viewBox="0 0 24 24">
-            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm6.1-.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
-          </svg>
-        </a>
-  
-      </div>
-    </div>
-  </section>
-
-  <section id="biography" class="page-section">
-    <h2>Biography</h2>  
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-      Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed,
-      dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper
-      congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est
-      eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu
-      massa, scelerisque vitae, consequat in, pretium a, enim.
-    </p>
-  
-    <p>
-      Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras
-      vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio
-      eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
-      primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
-      Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non
-      diam sodales hendrerit.
-    </p>
-  
-    <p>
-      Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel
-      massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus
-      aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula.
-      Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet
-      pellentesque diam. Integer quis metus vitae elit lobortis egestas.
-    </p>
-    <div class="theorem">
-      <strong>Theorema.</strong><br>
-      <em>
-        Per scientiam et industriam, systemata fiducia digna ex incertitudine
-        construuntur.
-      </em>
-    </div>
-  </section>
-
-  <section id="media" class="page-section">
-    <h2>Media</h2>
-  
-    <div class="media-grid">
-
-      <!-- =======================
-           Item 1 — BBC Audio
-           ======================= -->
-      <article class="media-item">
-        <div class="media-header">
-          <span class="media-source">BBC</span>
+    <main id="content">
+      <section id="intro" class="page-section intro-grid">
+        <div class="intro-portrait">
+          <img
+            src="preetam-og.jpg"
+            alt="Portrait of Preetam Dutta"
+            width="260"
+            height="260"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
-    
-        <h3 class="media-title">
-          De spe atque metu circa intelligentiam artificialem
-        </h3>
-    
-        <p class="media-body">
-          Disputatio publica de fiducia, periculo, et moderatione
-          systematum intelligentium.
+
+        <header class="intro-text">
+          <h1>Preetam K Dutta, PhD</h1>
+          <p>
+            I am the co-founder and CEO of an AI company focused on building secure,
+            production-grade machine learning systems. My work sits at the intersection
+            of research, infrastructure, and real-world deployment.
+          </p>
+
+          <div class="intro-socials">
+            <a
+              href="https://x.com/preetamkdutta"
+              aria-label="X"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.9 2H22l-6.7 7.7L23 22h-6.1l-4.8-6.3L6.7 22H2l7.1-8.2L1 2h6.2l4.4 5.8L18.9 2z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://linkedin.com/in/preetamkdutta"
+              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm8 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.4 0 6.4 3.6 6.4 8.3V24h-5v-7.4c0-1.8 0-4.2-2.6-4.2-2.6 0-3 2-3 4.1V24H8V8z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://youtube.com/@preetamkdutta"
+              aria-label="YouTube"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7.2c0-1.8-1.3-3.3-3.1-3.6C17.3 3 12 3 12 3s-5.3 0-7.9.6C2.3 3.9 1 5.4 1 7.2v9.6c0 1.8 1.3 3.3 3.1 3.6 2.6.6 7.9.6 7.9.6s5.3 0 7.9-.6c1.8-.3 3.1-1.8 3.1-3.6V7.2zm-13 8.1V8.7l6 3.3-6 3.3z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://bsky.app/profile/preetamkdutta.bsky.social"
+              aria-label="Bluesky"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 11.1c-.6-1.1-2.3-3.3-4-4.5C6.1 5.4 5.4 5.2 5.1 5.4c-.4.2-.5.9-.5 1.3 0 .4.2 3.5.4 4.1.6 2 2.7 2.7 4.5 2.5-2.7.4-3.2 2.1-2.1 3.5 1.2 1.6 3.4 1.1 4.5-.1.7-.7 1-1.4 1-1.4s.3.7 1 1.4c1.1 1.2 3.3 1.7 4.5.1 1.1-1.4.6-3.1-2.1-3.5 1.8.2 3.9-.5 4.5-2.5.2-.6.4-3.7.4-4.1 0-.4-.1-1.1-.5-1.3-.3-.2-1 0-2.8 1.2-1.7 1.2-3.4 3.4-4 4.6z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://instagram.com/preetamkdutta"
+              aria-label="Instagram"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4zm6.1-.9a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </header>
+      </section>
+
+      <section id="biography" class="page-section">
+        <h2>Biography</h2>
+        <p>
+          Preetam Dutta is the founder of
+          <strong><a href="https://www.marut.ai/">MarutAI</a></strong>, building a
+          full-stack AI team delivered via a platform for businesses looking to
+          reduce manual workflows or ship AI into their products. He builds for
+          the 99.9% — the people who win through fundamentals, not headlines.
         </p>
-    
-        <div class="media-type">
-          Audio
-        </div>
-    
-        <div class="media-meta">
-          <span>January 20, 2026</span>
-        </div>
-      </article>
-    
-      <!-- =======================
-           Item 2 — NYTimes Article
-           ======================= -->
-      <article class="media-item">
-        <div class="media-header">
-          <span class="media-source">NYT</span>
-        </div>
-    
-        <h3 class="media-title">
-          De spe atque metu circa intelligentiam artificialem
-        </h3>
-    
-        <p class="media-body">
-          Colloquium radiophonicum de spe publica et timore technologico explorans.
+
+        <p>
+          He previously founded and led
+          <strong><a href="https://www.elphasecure.com/">Elpha Secure</a></strong>,
+          raising $28M+ from institutional investors including Canapi, The
+          Hartford, and AXIS Capital. Across his companies, he has raised $36M+
+          and invested in dozens across stages, including Discord, Mercury, xAI,
+          OTOY, GrubMarket, and an early investment in Hyzon Motors (public).
         </p>
-    
-        <div class="media-type">
-          Article
-        </div>
-    
-        <div class="media-meta">
-          <span>January 16, 2026</span>
-        </div>
-      </article>
-    
-      <!-- =======================
-           Item 2 — NYTimes Article
-           ======================= -->
-           <article class="media-item">
-            <div class="media-header">
-              <span class="media-source">ABC</span>
-            </div>
-        
-            <h3 class="media-title">
-              Duis arcu
-      massa, scelerisque vitae
-            </h3>
-        
-            <p class="media-body">
-              Proin porttitor, orci nec nonummy molestie, enim est
-      eleifend mi, non fermentum diam nisl sit amet erat. Duis semper.
-            </p>
-        
-            <div class="media-type">
-              Article
-            </div>
-        
-            <div class="media-meta">
-              <span>January 14, 2026</span>
-            </div>
-          </article>
-    
-      <!-- =======================
-           Hidden Items
-           ======================= -->
 
-           <article class="media-item is-hidden">
-        <div class="media-header">
-          <span class="media-source">NYT</span>
-        </div>
-    
-        <h3 class="media-title">
-          De spe atque metu circa intelligentiam artificialem
-        </h3>
-    
-        <p class="media-body">
-          Disputatio de potestate, moderatione, et officio humano.
+        <p>
+          A licensed insurance broker, he brings an operator’s lens to risk,
+          security, and scale, and has presented on AI and cybersecurity to U.S.
+          government audiences. He holds a PhD from Columbia University in AI and
+          cybersecurity and is a Yale graduate (Chemical Engineering; Economics
+          &amp; Mathematics).
         </p>
-    
-        <div class="media-type">
-          Article
+
+        <p>
+          He also serves as a National Board Member at
+          <strong><a href="https://www.schoolsthatcan.org/">Schools That Can</a></strong>,
+          supporting access and opportunity through STEM education.
+        </p>
+
+        <div class="theorem">
+          <span class="theorem-title">Bayes’ Theorem.</span>
+          <span class="theorem-body">
+            Update beliefs with evidence—not narratives. In business: priors are
+            your hypotheses; evidence is customers, retention, revenue, and failures.
+          </span>
         </div>
-    
-        <div class="media-meta">
-          <span>January 10, 2026</span>
+      </section>
+
+      <section id="speaker" class="page-section">
+        <h2>Speaker</h2>
+
+        <p class="speaker-about">
+          Preetam Dutta is a founder, operator, researcher, and winning investor focused on
+          <strong>AI enablement</strong> and <strong>real-world risk</strong>—helping people make decisions
+          with clarity instead of hype.
+        </p>
+
+        <div class="speaker-grid">
+          <div class="speaker-left">
+            <h3>Signature topics</h3>
+
+            <div class="talk">
+              <h4>Fundamentals &gt; Fundraising</h4>
+              <p>Why headline strategy breaks the 99.9%—and how real companies are built.</p>
+              <ul>
+                <li>Operating fundamentals that compound</li>
+                <li>Choosing tradeoffs deliberately</li>
+                <li>Building from evidence, not narrative</li>
+              </ul>
+            </div>
+
+            <div class="talk">
+              <h4>AI Without the Headcount</h4>
+              <p>Shipping AI outcomes without building a full AI org.</p>
+              <ul>
+                <li>What “full-stack AI” means in practice</li>
+                <li>Execution structure + ownership</li>
+                <li>What to measure to know it works</li>
+              </ul>
+            </div>
+
+            <div class="talk">
+              <h4>Risk Is an Operating Decision</h4>
+              <p>What breaks companies, what protects them, and what matters when you scale.</p>
+              <ul>
+                <li>Insurance, security, and governance (practically)</li>
+                <li>Risk you can ignore vs risk you can’t</li>
+                <li>Resilience without losing speed</li>
+              </ul>
+            </div>
+
+            <div class="talk">
+              <h4>AI Sense-Making for the Real World</h4>
+              <p>A business-and-technical lens on what’s real in AI—and what to do next.</p>
+              <ul>
+                <li>Separating signal from noise</li>
+                <li>Adoption frameworks that hold up</li>
+                <li>Realistic hope: strengths + coverage</li>
+              </ul>
+            </div>
+
+            <div class="talk">
+              <h4>The Unselected Winner</h4>
+              <p>Winning without being “chosen.” Managing the lows is how you earn the next high.</p>
+              <ul>
+                <li>The hidden cost of “having it all”</li>
+                <li>How to choose sacrifice deliberately</li>
+                <li>Building for the 99.9%—and bringing others with you</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="speaker-right">
+            <h3>Audiences</h3>
+            <ul>
+              <li><strong>Founders &amp; operators</strong></li>
+              <li><strong>Product + engineering leaders</strong></li>
+              <li><strong>Investors &amp; insurers</strong></li>
+              <li><strong>Universities</strong></li>
+              <li><strong>Government</strong></li>
+            </ul>
+
+            <h3>Formats</h3>
+            <p>
+              <strong>Keynotes</strong>, <strong>fireside chats</strong>, <strong>panels</strong>,
+              <strong>university lectures</strong>, <strong>executive briefings</strong>.
+            </p>
+
+            <h3>Host intro</h3>
+            <p class="host-intro">
+              Preetam Dutta is a founder, operator, researcher, and winning investor focused on AI enablement and
+              real-world risk—helping people make decisions with clarity instead of hype. He has raised $36M+ across
+              his businesses, is a licensed insurance broker, and has presented on AI and cybersecurity to U.S.
+              government audiences. He holds a Columbia PhD in AI and cybersecurity and is a Yale graduate.
+            </p>
+
+            <h3>Booking</h3>
+            <p><a href="mailto:preetam@marut.ai">preetam@marut.ai</a></p>
+          </aside>
         </div>
-      </article>
-    
+      </section>
 
-           <article class="media-item is-hidden">
-            <div class="media-header">
-              <span class="media-source">CBS</span>
-            </div>
-        
-            <h3 class="media-title is-hidden">
-              De spe atque metu circa intelligentiam artificialem
-            </h3>
-        
-            <p class="media-body">
-              Disputatio de potestate, moderatione, et officio humano.
-            </p>
-        
-            <div class="media-type">
-              Article
-            </div>
-        
-            <div class="media-meta">
-              <span>December 22, 2025</span>
-            </div>
-          </article>
+      <section id="research" class="page-section">
+        <h2>Research</h2>
 
-          <article class="media-item is-hidden">
-            <div class="media-header">
-              <span class="media-source">FOX NEWS</span>
-            </div>
-        
-            <h3 class="media-title is-hidden">
-              Maecenas adipiscing ante non
-      diam sodales hendrerit.
-            </h3>
-        
-            <p class="media-body">
-              Disputatio de potestate, moderatione, et officio humano.
-            </p>
-        
-            <div class="media-type">
-              Article
-            </div>
-        
-            <div class="media-meta">
-              <span>December 1, 2025</span>
-            </div>
-          </article>
+        <ul class="bibliography">
+          <li>
+            <span class="author">Lucius Marcellus, A. et al.</span><br />
+            <span class="title">De Privata Notitia et Datasetis Syntheticis.</span><br />
+            <span class="journal">
+              Tractatus de aequilibrio inter communicationem scientiae et tutela
+              informationis, proponens rationes quae progressionem academicam
+              sine excessu regulationis sustineant.
+            </span><br />
+            <a href="#">[Link]</a>
+          </li>
 
-    </div>
-    
-    <button class="media-load-more" id="loadMore">
-      Load more
-    </button>
+          <li>
+            <span class="author">Marcellus, L., et al.</span><br />
+            <span class="title">Methodi et Systemata ad Explorationem Periculorum Internorum.</span><br />
+            <span class="journal">
+              Expositio structurarum ad mores adversos simulandos, quibus firmitas
+              systematum detectionis per exempla verisimilia probatur.
+            </span><br />
+            <a href="#">[Link]</a>
+          </li>
 
-    <section id="talk" class="page-section">
-      <h2>Talks</h2><br>
-      <ul class="talks-list">
+          <li>
+            <span class="author">Marcellus, L., et al.</span><br />
+            <span class="title">Automata Simulata ad Probationem Systematum in Tempore Reali.</span><br />
+            <span class="journal">
+              Dissertatio de machinis agentibus fictis ad probationes continuas
+              exercendas, ita ut stabilitas operationum sine perturbatione servetur.
+            </span><br />
+            <a href="#">[Link]</a>
+          </li>
+        </ul>
 
-        <li class="talk-item overlay-teal-dark">
-          <div class="talk-thumb">
-            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
-          </div>
-          <div class="talk-content">
-            <strong>De Machinis Intelligentibus</strong><br>
-            Oratio publica de potestate algorithmica et fiducia civili.
-          </div>
-        </li>
-      
-        <li class="talk-item overlay-teal-light">
-          <div class="talk-thumb">
-            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
-          </div>
-          <div class="talk-content">
-            <strong>De Fiducia Artificiali</strong><br>
-            Colloquium de moderatione systematum intelligentium.
-          </div>
-        </li>
-      
-        <li class="talk-item overlay-magenta">
-          <div class="talk-thumb">
-            <img src="preetam-talk1.jpg" alt="Talk thumbnail">
-          </div>
-          <div class="talk-content">
-            <strong>De Potestate Algorithmica</strong><br>
-            Disputatio de imperio technologiae et officio humano.
-          </div>
-        </li>
-      
-      </ul>
-    </section>
+        <p>
+          300+ citations ·
+          <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ" rel="noopener noreferrer">
+            More research papers.
+          </a>
+        </p>
+      </section>
 
- <section id="research" class="page-section">
-  <h2>Research</h2>
-
- 
-  <ul class="bibliography">
-
-    <li>
-      <span class="author">Lucius Marcellus, A. et al.</span><br>
-      <span class="title">De Privata Notitia et Datasetis Syntheticis.</span><br>
-      <span class="journal">
-        Tractatus de aequilibrio inter communicationem scientiae et tutela
-        informationis, proponens rationes quae progressionem academicam
-        sine excessu regulationis sustineant.
-      </span><br>
-      <a href="#">[Link]</a>
-    </li>
-  
-    <li>
-      <span class="author">Marcellus, L., et al.</span><br>
-      <span class="title">
-        Methodi et Systemata ad Explorationem Periculorum Internorum.
-      </span><br>
-      <span class="journal">
-        Expositio structurarum ad mores adversos simulandos, quibus firmitas
-        systematum detectionis per exempla verisimilia probatur.
-      </span><br>
-      <a href="#">[Link]</a>
-    </li>
-  
-    <li>
-      <span class="author">Marcellus, L., et al.</span><br>
-      <span class="title">
-        Automata Simulata ad Probationem Systematum in Tempore Reali.
-      </span><br>
-      <span class="journal">
-        Dissertatio de machinis agentibus fictis ad probationes continuas
-        exercendas, ita ut stabilitas operationum sine perturbatione servetur.
-      </span><br>
-      <a href="#">[Link]</a>
-    </li>
-  
-  </ul>
-
-  <p>
-    300+ citations ·
-    <a href="https://scholar.google.com/citations?user=3ChKBJ0AAAAJ">More research papers.</a>
-  </p>
-</section>
-
-  <footer>
-    <p>© 2026 Preetam Dutta</p>
-  </footer>
-
-</main>
-<script>
-  const button = document.getElementById("loadMore");
-  const hiddenItems = document.querySelectorAll(".media-item.is-hidden");
-
-  button.addEventListener("click", () => {
-    hiddenItems.forEach(item => {
-      item.classList.remove("is-hidden");
-    });
-    button.style.display = "none";
-  });
-</script>
-</body>
+      <footer>
+        <p>© 2026 Preetam Dutta</p>
+      </footer>
+    </main>
+  </body>
 </html>
