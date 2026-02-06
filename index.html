@@ -226,14 +226,24 @@
       .intro-portrait {
         width: 260px;
         aspect-ratio: 1 / 1;
-        border-radius: 50%;
+        border-radius: 16px;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--portrait-bg);
-        box-shadow: var(--shadow), var(--inset);
+        background: #efece6;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.35);
       }
+      .intro-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+
 
       .intro-socials {
         display: flex;
