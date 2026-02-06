@@ -393,7 +393,7 @@
         display: flex;
         gap: 1rem;
         overflow-x: auto;
-        padding: 0.25rem 0.25rem 0.75rem;
+        padding: 0.25rem 1rem 0.75rem 0.25rem;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scroll-behavior: smooth;
@@ -405,7 +405,7 @@
       }
 
       .topic-card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(100% - 2.25rem);
         scroll-snap-align: start;
         background: var(--card-bg);
         border: 1px solid var(--border);
