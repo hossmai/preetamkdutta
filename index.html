@@ -496,7 +496,7 @@
           text-align: center;
           justify-self: center;
         }
-        
+
         .intro-portrait {
           width: 140px;
           margin-inline: auto;
@@ -511,16 +511,29 @@
           justify-content: center;
         }
       }
+      @media (min-width: 1201px) {
+        #intro .intro-text {
+          justify-self: start;
+          text-align: left;
+        }
 
-      #intro .intro-text {
-        justify-self: start;
-        text-align: left;
+        #intro .intro-text h1 {
+          text-align: left;
+          margin-left: 0;
+          margin-right: 0;
+          width: auto;
+          display: block;
+        }
       }
 
-      #intro .intro-text h1 {
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
+      @media (max-width: 1200px) {
+        #intro .intro-text h1 {
+          text-align: center;
+          width: 100%;
+          display: block;
+          margin-left: 0;
+          margin-right: 0;
+        }
       }
     </style>
   </head>
